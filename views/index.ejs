@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+        <h1>My ToDoList</h1>
+    </header>
+    <main>
+        <div class="center-container">
+            <div class="box-container">
+                <h1><%= currentDay %></h1>
+          
+                <ul class="todo-list">
+                  <li><input type="checkbox"> Food</li>
+                  <li><input type="checkbox">Go to Gym</li>
+                  <li><input type="checkbox">Go to College</li>
+          
+                  <% for(var i = 0 ; i< addedListOfItems.length ; i++ ) { %>
+                  <li><input type="checkbox"><%= addedListOfItems[i] %></li>
+                  <% } %>
+                
+                </ul>
+                <form action="/" method="post">
+                  <input type="text" name="newItem" autocomplete="off" />
+                  <button type="submit">Add Task</button>
+                 
+                </form>
+              </div>
+        </div>
+        
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
